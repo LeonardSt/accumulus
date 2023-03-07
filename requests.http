@@ -1,0 +1,78 @@
+### curl -X POST localhost:8080/addWish -H 'Content-type:application/json' -d '{"mail":"aa@com","toppings":[{"name":"a"},{"name":"b"}]}'"
+POST http://localhost:8080/addWish
+Content-Type: application/json
+
+{
+  "mail": "aa@com",
+  "toppings": [
+    {
+      "name": "a"
+    },
+    {
+      "name": "b"
+    }
+  ]
+}
+
+### curl -X POST localhost:8080/addWish -H 'Content-type:application/json' -d '{"mail":"bb@com","toppings":[{"name":"c"},{"name":"d"}]}'"
+POST http://localhost:8080/addWish
+Content-Type: application/json
+
+{
+  "mail": "bb@com",
+  "toppings": [
+    {
+      "name": "c"
+    },
+    {
+      "name": "d"
+    }
+  ]
+}
+
+### curl -X POST localhost:8080/addWish -H 'Content-type:application/json' -d '{"mail":"cc@com","toppings":[{"name":"a"},{"name":"c"}]}'"
+POST http://localhost:8080/addWish
+Content-Type: application/json
+
+{
+  "mail": "cc@com",
+  "toppings": [
+    {
+      "name": "a"
+    },
+    {
+      "name": "c"
+    }
+  ]
+}
+
+### curl -X POST localhost:8080/addWish -H 'Content-type:application/json' -d '{"mail":"dd@com","toppings":[{"name":"d"},{"name":"q"}]}'"
+POST http://localhost:8080/addWish
+Content-Type: application/json
+
+{
+  "mail": "dd@com",
+  "toppings": [
+    {
+      "name": "d"
+    },
+    {
+      "name": "q"
+    }
+  ]
+}
+
+### Get all toppings
+GET http://localhost:8080/toppings
+
+### Get all customers by toppings
+GET http://localhost:8080/customers?toppings=a
+
+### Get all customers by toppings
+GET http://localhost:8080/customers?toppings=a,c
+
+### Get all customers by toppings
+GET http://localhost:8080/customers?toppings=q
+
+### Dellete all wishes
+DELETE http://localhost:8080/delete
